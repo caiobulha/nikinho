@@ -1,11 +1,13 @@
 package com.example.zoologico;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/animals")
+@RestController
+@RequestMapping("/animals")
 public class ZoologicoController {
-    @GetMapping
+    @GetMapping("/zebra")
     public String getAnimals() {
         return "zebra";
     }
